@@ -17,10 +17,13 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
- 
+Create a HTML5 drawing canvas with border and 4 buttons. 1 button will draw a reactangle on the canvas when pressed, another will draw my name, 
+another will display a loaded picture, and another will clear the canvas. This app assignment is intended for me to familiarize myself with working 
+on canvases on HTML for future code. 
+
 Known Issues:
-blah, blah, blah, blah
+Unable to get the buttons to be arranged directly below the canvas. 
+
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -35,11 +38,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-/*
+	
 	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-*/
+	
 	function drawRectangle() {
 		var aRectangle = document.getElementById("a");
 		var aContext = aRectangle.getContext("2d");
