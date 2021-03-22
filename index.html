@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Daniel Fan 
+Daniel Fan
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -35,9 +35,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+	function drawRectangle() {
+		var aRectangle = document.getElementById("a");
+		var aContext = aRectangle.getContext("2d");
+		aContext.fillRect(50,25,150,100);
+	}
+
 </script>
 
 
@@ -68,13 +75,12 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<canvas id = "a" width = "300" height = "225" class="clear" style= "border:1px dotted;float:left"></canvas> <!- This creates a bordered canvas ->
+		<a onclick = "drawRectangle();" class="w3-btn w3-grey w3-round">Draw Rectangle</a> 
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	
-	<canvas width = "300" height = "225" class="clear" style= "border:1px dotted;float:left"></canvas> //This creates a bordered canvas 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
