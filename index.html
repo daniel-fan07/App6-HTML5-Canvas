@@ -35,14 +35,38 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+/*
 	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
-	
+*/
 	function drawRectangle() {
 		var aRectangle = document.getElementById("a");
 		var aContext = aRectangle.getContext("2d");
 		aContext.fillRect(50,25,150,100);
+	}
+
+	function drawName() {
+		var aName = document.getElementById("a");
+		var aContext = aName.getContext("2d");
+		aContext.font = "bold 24px sans-serif";
+		aContext.fillText("Daniel Fan", 150, 200);
+	}
+	
+	function getPicture() {
+		var aPicture = document.getElementById("a");
+		var aContext = aPicture.getContext("2d");
+		/* var actualImage = document.getElementById("image");
+		aContext.drawImage(actualImage, 0, 0); */
+		var newImage = new Image();
+		newImage.src = "https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg"
+		aContext.drawImage(newImage, 20, 20, 192, 108);
+	}
+
+	function clearCanvas () {
+		var aPicture = document.getElementById("a");
+		var aContext = aPicture.getContext("2d");
+		aContext.clearRect(0, 0, aPicture.width, aPicture.height);
 	}
 
 </script>
@@ -75,12 +99,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 	
 <div id="content" class="w3-container">
-	<canvas id = "a" width = "300" height = "225" class="clear" style= "border:1px dotted;float:left"></canvas> <!- This creates a bordered canvas ->
-		<a onclick = "drawRectangle();" class="w3-btn w3-grey w3-round">Draw Rectangle</a> 
-		
+	<canvas id = "a" width = "400" height = "400" class="clear" style= "border:1px dotted;float:left"></canvas> <!- This creates a bordered canvas ->
+
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+		<a onclick = "drawRectangle();" class="w3-btn w3-grey w3-round">Draw Rectangle</a> 
+		<a onclick = "drawName();" class="w3-btn w3-grey w3-round">Draw Name</a> 
+		<a onclick = "getPicture();" class="w3-btn w3-grey w3-round">Picture</a> 
+		<a onclick = "clearCanvas();" class="w3-btn w3-grey w3-round">Clear</a>
+
+	<!- <img id="image" src="https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg" alt="image" ->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
