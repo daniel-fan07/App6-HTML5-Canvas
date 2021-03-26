@@ -20,10 +20,8 @@ Brief Description of Goal of Code:
 Create a HTML5 drawing canvas with border and 4 buttons. 1 button will draw a reactangle on the canvas when pressed, another will draw my name, 
 another will display a loaded picture, and another will clear the canvas. This app assignment is intended for me to familiarize myself with working 
 on canvases on HTML for future code. 
-
 Known Issues:
 Unable to get the buttons to be arranged directly below the canvas. 
-
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -39,9 +37,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 	
-	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+//	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+//	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+//	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
 	function drawRectangle() { // this creates a function that draws a rectangle on the HTML canvas element 
 		var aRectangle = document.getElementById("a"); //this creates a variable that retrieves the canvas element created below that matches the ID "a" from the DOM 
@@ -98,18 +96,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
 </div>
-	
+
 <div id="content" class="w3-container">
-	<canvas id = "a" width = "400" height = "400" class="clear" style= "border:1px dotted;float:left"></canvas> <!-- above, I created a canvas element. within the element, I included an ID attribute to which allows this specific canvas element to be accessed from the DOM in various portions of the code (which will be very needed in the JS part of this code). I also specified its width and height to be both 400. The string of attributes after style specifies a dotted border that surrounds the perimeter of the border so that the canvas is not just blank in the final version of the code-->
+	<canvas id = "a" width = "400" height = "400" class="clear" style= "border:1px solid;float:left"></canvas> <!-- I created a canvas element. within the element, I included an ID attribute to which allows this specific canvas element to be accessed from the DOM in various portions of the code (which will be very needed in the JS part of this code). I also specified its width and height to be both 400. The string of attributes after style specifies a solid border that surrounds the perimeter of the border so that the canvas is not just blank in the final version of the code-->
 
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+</div>
 
+
+<div>
 		<a onclick = "drawRectangle();" class="w3-btn w3-grey w3-round">Draw Rectangle</a> <!- this creates a button (saying "Draw Rectangle") that, when pressed executes the drawRectangle() function on the JS portion of the code, which creates a rectangle on the canvas -> 
 		<a onclick = "drawName();" class="w3-btn w3-grey w3-round">Draw Name</a> <!- this creates a button (saying "Draw Name") that, when pressed executes the drawName() function on the JS portion of the code, which prints my name in text on the canvas   ->
 		<a onclick = "getPicture();" class="w3-btn w3-grey w3-round">Picture</a> <!- this creates a button (saying "Picture") that, when pressed executes the getPicture() function on the JS portion of the code, which prints a picture on the canvas ->
 		<a onclick = "clearCanvas();" class="w3-btn w3-grey w3-round">Clear</a> <!- this creates a button (saying "Clear") that, when pressed executes the clearCanvas() function on the JS portion of the code, which clears the canvas ->
+</div>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
